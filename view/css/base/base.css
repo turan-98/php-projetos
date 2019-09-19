@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Raleway&display=swap');
+body{
+    font-family: 'Raleway', sans-serif;
+}
+.brand{
+    font-family:'Lato', sans-serif;
+}
+#name{
+    text-transform: capitalize;
+}
