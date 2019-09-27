@@ -33,6 +33,13 @@ $stmt->execute();
 <body>
     <header class="p-2 bg-primary text-white">
         <h1 class="m-2">Blue Bank</h1>
+        <nav class="sidebar">
+            <ul>
+                <li><a class="text-light" href="#index.php" target="_blank" rel="noopener noreferrer">HOME</a></li>
+                <li><a class="text-light" href="cadastro.php" target="_blank" rel="noopener noreferrer">Cadastro</a></li>
+                <li><a class="text-light" href="form-edit.php" target="_blank" rel="noopener noreferrer">Editar</a></li>
+            </ul>
+        </nav>
     </header>
     <main class="o-main">
         <div class="card m-4 p-3">
@@ -62,11 +69,11 @@ $stmt->execute();
                     <td scope="row"><?php echo $user['name'] ?></td>
                     <td><?php echo $user['email'] ?></td>
                     <td><?php echo ($user['gender'] == 'm') ? 'Masculino' : 'Feminino' ?></td>
-                    <td><?php echo dateConvert($user['birthdate']) ?></td>
+                    <td><?php echo dateConvert($user['birthdate'])?></td>
                     <td><?php echo calculateAge($user['birthdate']) ?> anos</td>
                     <td>
                     <a href="form-edit.php?id=<?php echo $user['id'] ?>">Editar</a>
-                        <a href="delete.php?id=<?php echo $user['id'] ?>" onclick="return confirm('Tem certeza de que deseja remover?');">Remover</a>
+                    <a href="delete.php?id=<?php echo $user['id'] ?>" onclick="return confirm('Tem certeza de que deseja remover?');">Remover</a>
                     </td>
                 </tr>
                 <?php endwhile; ?>
